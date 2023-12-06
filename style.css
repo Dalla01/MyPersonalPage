@@ -280,3 +280,64 @@ button:active
     text-align: center;
 }
 
+/* Adicione estas media queries no seu arquivo style.css */
+
+/* Estilos para dispositivos móveis (até 767px de largura) */
+@media screen and (max-width: 767px) {
+    nav {
+        padding: 0 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .conteudo-texto {
+        text-align: center;
+        margin: 20px 5%;
+    }
+
+    .conteudo-texto p:nth-child(1) {
+        font-size: 28px;
+    }
+
+    .conteudo-texto p:nth-child(2) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .conteudo-texto p:nth-child(3) {
+        font-size: 18px;
+    }
+
+    .conteudo-texto button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .imgbg {
+        display: none;
+    }
+}
+
+/* Estilos para tablets e telas maiores (768px - 1023px de largura) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Adicione estilos específicos para tablets, se necessário */
+}
+
+/* Estilos para telas maiores (a partir de 1024px de largura) */
+@media screen and (min-width: 1024px) {
+    /* Adicione estilos específicos para desktops e telas maiores, se necessário */
+}
