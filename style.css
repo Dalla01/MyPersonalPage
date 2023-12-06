@@ -284,24 +284,65 @@ button:active
 
 /* Estilos para dispositivos móveis (até 767px de largura) */
 @media screen and (max-width: 767px) {
-    nav {
-        padding: 0 5%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    body {
+        background-color: #f6f5f5;
+        margin-right: 0px;
+        padding: 0px;
     }
 
-    .logo {
-        margin-bottom: 20px;
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        background-image: none;
+        position: relative;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 2px 2px 12px rgba(0,0,0, 0.2);
+        padding: 0px 5%;
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav ul li a {
+        margin: 5px;
+        font-family: Cambria;
+        color: #505050;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .logo {
+        font-family: Ink Free;
+        color: #000000;
+        font-weight: bold;
+        font-size: 25px;
         margin-bottom: 20px;
     }
 
-    nav ul li {
-        margin: 5px 0;
+    .active {
+        font-weight: bold;
+        color:rgba(0, 0, 0, 0.45)
     }
 
     .conteudo-texto {
@@ -310,21 +351,53 @@ button:active
     }
 
     .conteudo-texto p:nth-child(1) {
+        font-family: 'Cambria';
+        font-weight: bold;
+        color: #6d6d6d;
         font-size: 28px;
     }
 
     .conteudo-texto p:nth-child(2) {
+        font-family: 'Cambria';
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #505050;
         font-size: 24px;
         line-height: 30px;
     }
 
     .conteudo-texto p:nth-child(3) {
+        font-family: 'Cambria';
+        color: #6d6d6d;
         font-size: 18px;
+        line-height: 24px;
     }
 
     .conteudo-texto button {
         width: 100%;
-        margin-bottom: 10px;
+        height: 42px;
+        border-radius: 10px;
+        font-family: Cambria;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 14px;
+        outline: none;
+        margin: 0px 10px;
+    }
+
+    .btn1 {
+        background-color: rgba(17, 17, 17, 0.85);
+        border: none;
+    }
+
+    .btn2 {
+        background-color: rgba(83, 82, 82, 0.85);
+        border: 2px;
+        color: #000000;
+    }
+
+    button:active {
+        transform: scale(1.1);
     }
 
     .imgbg {
