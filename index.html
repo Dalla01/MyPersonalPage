@@ -1,54 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andre Garcia Page's</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andre Garcia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cambria', serif;
+      background-color: #f6f5f5;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Ink Free';
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #505050;
+    }
+
+    nav ul li a.active {
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero {
+      padding: 4rem 5%;
+      text-align: center;
+      background-image: url('images/bg.png');
+      background-size: cover;
+      background-position: center;
+      color: #333;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn1 {
+      background: rgba(17, 17, 17, 0.85);
+      color: #fff;
+    }
+
+    .btn2 {
+      background: rgba(83, 82, 82, 0.85);
+      color: #000;
+    }
+
+    .projects, .about, .contact {
+      padding: 2rem 5%;
+      text-align: center;
+    }
+
+    .project-card {
+      background: #f8ef73;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 10px;
+      max-width: 300px;
+      margin: 1rem auto;
+    }
+
+    .project-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background: #f8ef73;
+      padding: 1rem;
+    }
+
+    .social-media a img {
+      width: 50px;
+      transition: transform 0.3s;
+    }
+
+    .social-media a:hover img {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<!-- Header menu code-->
- <section>
-
+  <header>
     <nav>
-        <a href="#" class="logo"> André Garcia </a>
-
-        <ul>
-
-            <li><a href="#" class="active"> Home </a></li>
-            <li><a href="aboutme.html"> About me </a></li>
-            <li><a href="projects.html" > Projects </a></li>
-            <li><a href="contact.html"> Contact </a></li>
-        </ul>
-        
+      <div class="logo">André Garcia</div>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-        <!-- Content text-->
-    <div class="conteudo-texto">
-        <p> Welcome! </p>
-        <p> I'm André Garcia (He/Him) </p>
-        <p> <br>Master in Plant Production & <br>
-            <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
-                            PhD candidate in Agricultural Remote Sensing <br></p>
-        
-        <a href="http://lattes.cnpq.br/7262240008707700" target="_blank">                 
-            <button class="btn1"> Link to Lattes Curriculum </button>
-        </a>  
-
-        <a href="https://orcid.org/0000-0001-9063-4397" target="_blank">                 
-            <button class="btn2"> Link to ORCID Curriculum</button>
-        </a>  
+  <section class="hero">
+    <h1>Welcome!</h1>
+    <h2>I'm André Garcia (He/Him)</h2>
+    <p>Master in Plant Production &<br>PhD candidate in Agricultural Remote Sensing</p>
+    <div class="buttons">
+      <a class="btn1" href="http://lattes.cnpq.br/7262240008707700" target="_blank">Lattes</a>
+      <a class="btn2" href="https://orcid.org/0000-0001-9063-4397" target="_blank">ORCID</a>
     </div>
-    <!-- 
-     // Background image
-    <div>
-        <img src="images/backgroundImg.png" class="imgbg" alt="ImageBackGround">
+  </section>
 
-    </div> 
-    --> 
-    </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hello everyone!
+        My name is André Garcia and here's a little bit about my academic education and qualification. 
+        In the end of 2018, Agronomist graduated from Instituto Federal do Espírito Santo - IFES 
+        Campus Santa Teresa, where I was developed projects and researches related to irrigation 
+        management and agrometeorology, becoming a member of the research group IRRIFES lead by 
+        Dr. Gustavo Haddad, which focuses on studies related to irrigation and water resources. 
+        Still in graduation, I had the opportunity to do an internship at a meteorological microstation
+         in which I was responsible for processing and organizing the database, as well as providing it
+          to users. In 2021 I was concluded my Master's degree at the Graduate Program in Vegetal 
+          Production at the Universidade Estadual do Norte Fluminense Darcy Ribeiro - UENF, in the 
+          concentration area of irrigated agriculture and had agrometeorology as research line,
+           surpervised by Dr. José Carlos Mendonça. My research focused in verify the feasilbility of 
+           Conilon coffee cultivation in the Northern of Rio de Janeiro based on drip irrigation and 
+           climate parameters. Between 2019 and 2021, I carried out a Specialization in Occupational 
+           Safety, in which I developed a research to identify occupational risk areas in rural 
+           properties using remote sensing images.
+           Since 2021 to currently, I'm PhD candidate at Instituto Nacional de Pesquisas Espaciais - 
+           INPE, where develop research about agricultural remote sense surpervised by Dr Ieda Sanches,
+            and integrate the Agricultural Remote Sensing Laboratory - AgriRS. Basically my study 
+            focus on irrigated rice mapping using optical and microwave (SAR) sensors. In the first 
+            quarter of 2023 I became a member of International Society for Photogrammetry and Remote 
+            Sensing - ISPRS.</p>
+  </section>
 
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <a href="https://mrpythoncreator.users.earthengine.app/view/time-series-safra">
+        <img src="images/TimeSeriesSafraLogo.png" alt="TSS Logo">
+        <p>Time series pattern of various crop types in Brazil using CONAB data.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Thank you for visiting! Feel free to contact me via the platforms below:</p>
+    <div class="social-media">
+      <a href="https://twitter.com/DecoDalla" target="_blank"><img src="images/twitterLogo.png" alt="Twitter"></a>
+      <a href="mailto:andre.garcia@inpe.br" target="_blank"><img src="images/emailLogo.png" alt="Email"></a>
+      <a href="https://medium.com/@andredallabg" target="_blank"><img src="images/mediumLogo.png" alt="Medium"></a>
+      <a href="https://www.linkedin.com/in/andr%C3%A9-dalla-b-garcia-a77b20116/" target="_blank"><img src="images/linkedinLogo.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Dalla01" target="_blank"><img src="images/gitHubLogo.png" alt="GitHub"></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 André Garcia. All rights reserved.
+  </footer>
 </body>
 
 </html>
